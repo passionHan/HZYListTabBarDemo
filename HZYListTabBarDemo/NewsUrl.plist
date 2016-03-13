@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>最新</string>
+		<key>urlString</key>
+		<string>http://lol.data.shiwan.com/getArticleListImprove/?cid_rel=207&amp;page=%d</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>活动</string>
+		<key>urlString</key>
+		<string>http://lol.data.shiwan.com/getArticleListImprove/?cid_rel=215&amp;page=%d</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>赛事</string>
+		<key>urlString</key>
+		<string>http://lol.data.shiwan.com/getArticleListImprove/?cid_rel=216&amp;page=%d</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>神贴</string>
+		<key>urlString</key>
+		<string>http://lol.data.shiwan.com/getArticleListImprove/?cid_rel=212&amp;page=%d</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>美女</string>
+		<key>urlString</key>
+		<string>http://lol.data.shiwan.com/getArticleListImprove/?cid_rel=210&amp;page=%d</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>囧图</string>
+		<key>urlString</key>
+		<string>http://lol.data.shiwan.com/getArticleListImprove/?cid_rel=213&amp;page=%d</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>攻略</string>
+		<key>urlString</key>
+		<string>http://lol.data.shiwan.com/getArticleListImprove/?cid_rel=214&amp;page=%d</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>官方</string>
+		<key>urlString</key>
+		<string>http://lol.data.shiwan.com/getArticleListImprove/?cid_rel=211&amp;page=%d</string>
+	</dict>
+</array>
+</plist>
