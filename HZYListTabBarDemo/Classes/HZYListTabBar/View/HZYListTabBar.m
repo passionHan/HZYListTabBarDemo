@@ -54,7 +54,7 @@
     
     //设置箭头按钮
     UIButton *arrowButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    arrowButton.frame = CGRectMake(kScreenSize.width - kArrowButtonW, 0, kArrowButtonW, kArrowButtonW);
+    arrowButton.frame = CGRectMake(kScreenW - kArrowButtonW, 0, kArrowButtonW, kArrowButtonW);
     [arrowButton setImage:[UIImage imageNamed:klistTabBarResourcesPath(@"arrow")] forState:UIControlStateNormal];
     [arrowButton setImage:[UIImage imageNamed:klistTabBarResourcesPath(@"arrow")] forState:UIControlStateHighlighted];
     arrowButton.backgroundColor = [UIColor lightGrayColor];
@@ -63,11 +63,11 @@
     [self addSubview:self.arrowButton];
     
     //设置滚动的listTabBar
-    UIScrollView *listTabBar = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, kScreenSize.width - kArrowButtonW,kArrowButtonW)];
+    UIScrollView *listTabBar = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, kScreenW - kArrowButtonW,kArrowButtonW)];
     listTabBar.showsHorizontalScrollIndicator = NO;
     self.listTabBar = listTabBar;
     [self addSubview:self.listTabBar];
-
+    
 }
 /**
  *  重写属性currentItemIndex的setter方法
@@ -80,14 +80,14 @@
     
     [self settingSelectedButton:button];
     
-    CGFloat listTabBatF = kScreenSize.width - kArrowButtonW;
+    CGFloat listTabBatF = kScreenW - kArrowButtonW;
     
     CGFloat rightButtonMaxX = button.frame.origin.x + button.frame.size.width;
     
     if (rightButtonMaxX > listTabBatF - 20)
     {
         CGFloat offsetX = rightButtonMaxX - listTabBatF;
-        if (_currentItemIndex < self.itemsTitle.count - 1)
+        if (_currentItemIndex < self.listModel.count - 1)
         {
             offsetX = offsetX + 60.0;
         }
@@ -101,20 +101,22 @@
 }
 
 /**
- *  重写属性setItemsTitle的setter方法(在控制器中调用itemsTitle的setter方法是就会来到这里->self.itemsTitle=)
+ *  重写属性listModelArray的setter方法(在控制器中调用listModelArray的setter方法是就会来到这里->listModelArray=)
  */
-- (void)setItemsTitle:(NSArray *)itemsTitle{
+- (void)setListModel:(NSArray *)listModel{
     
-    _itemsTitle = itemsTitle;
+    _listModel = listModel;
     
     CGFloat buttonX = 0;
     CGFloat buttonW = 0;
-    for (int i = 0; i < itemsTitle.count; i ++) {
+    for (int i = 0; i < listModel.count; i ++) {
+        
+        HZYListTitleModel *model = _listModel[i];
         
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-
+        
         //取得item的标题
-        NSString *title = _itemsTitle[i][kPlistTitle];
+        NSString *title = model.title;
         buttonW = [self sizeWithFont:klistTabBarItemsFontSize text:title].width;
         button.titleLabel.font = [UIFont systemFontOfSize:13];
         button.frame = CGRectMake(10 + buttonX, 0, buttonW , kArrowButtonW);
@@ -128,7 +130,7 @@
             button.selected = YES;
         }
         [self.listTabBar addSubview:button];
-
+        
         [self.items addObject:button];
         
         buttonX += buttonW + kItemsPadding;
@@ -180,7 +182,7 @@
     
     NSDictionary *attribute = @{NSFontAttributeName:[UIFont systemFontOfSize:fontSize]};
     
-   return [text boundingRectWithSize:CGSizeMake(MAXFLOAT, kArrowButtonW) options:NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil].size;
+    return [text boundingRectWithSize:CGSizeMake(MAXFLOAT, kArrowButtonW) options:NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil].size;
     
 }
 /**
@@ -193,8 +195,4 @@
         [self.delegate listTabBarDidClickedArrowButton:self];
     }
 }
-
-
-
-
 @end

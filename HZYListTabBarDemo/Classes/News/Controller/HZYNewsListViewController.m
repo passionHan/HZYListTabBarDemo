@@ -32,7 +32,7 @@
     
     _newsArray = [NSMutableArray array];
     
-    self.tableView.frame = CGRectMake(0, 0, kScreenSize.width, kScreenSize.height - kNavY - kArrowButtonW);
+    self.tableView.frame = CGRectMake(0, 0, kScreenW,kscreenH - kNavY - kArrowButtonW);
     
     self.tableView.rowHeight = 80;
     
@@ -51,7 +51,7 @@
         weakSelf.pageIndex ++;
         [weakSelf loadMoreData];
     }];
-    
+
     self.update = YES;
 }
 

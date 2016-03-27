@@ -28,8 +28,7 @@
     HZYNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     
     if (!cell) {
-        
-        NSLog(@"df");
+    
         cell = [[[NSBundle mainBundle] loadNibNamed:@"HZYNewsCell" owner:nil options:nil] firstObject];
         
     }

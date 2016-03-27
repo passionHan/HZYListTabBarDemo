@@ -12,5 +12,7 @@
 
 @property (nonatomic, copy) NSString *urlString;
 
+@property (nonatomic ,copy) NSString *titleName;
+
 
 @end

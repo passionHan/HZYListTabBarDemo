@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		083DAD991CA8910000974597 /* HZYCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 083DAD961CA8910000974597 /* HZYCollectionView.m */; };
+		083DAD9A1CA8910000974597 /* HZYCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 083DAD981CA8910000974597 /* HZYCollectionViewCell.m */; };
+		083DADA21CA8917100974597 /* HZYListTitleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 083DADA11CA8917100974597 /* HZYListTitleModel.m */; };
 		4E8BDF9E1C92AF25004F177A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E8BDF9C1C92AF25004F177A /* Main.storyboard */; };
 		4E8BDFA01C92AF25004F177A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E8BDF9F1C92AF25004F177A /* Images.xcassets */; };
 		4E8BDFA31C92AF25004F177A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E8BDFA11C92AF25004F177A /* LaunchScreen.xib */; };
@@ -90,6 +93,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		083DAD951CA8910000974597 /* HZYCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZYCollectionView.h; sourceTree = "<group>"; };
+		083DAD961CA8910000974597 /* HZYCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZYCollectionView.m; sourceTree = "<group>"; };
+		083DAD971CA8910000974597 /* HZYCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZYCollectionViewCell.h; sourceTree = "<group>"; };
+		083DAD981CA8910000974597 /* HZYCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZYCollectionViewCell.m; sourceTree = "<group>"; };
+		083DADA01CA8917100974597 /* HZYListTitleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZYListTitleModel.h; sourceTree = "<group>"; };
+		083DADA11CA8917100974597 /* HZYListTitleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZYListTitleModel.m; sourceTree = "<group>"; };
 		4E8BDF8F1C92AF25004F177A /* HZYListTabBarDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HZYListTabBarDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E8BDF931C92AF25004F177A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E8BDF9D1C92AF25004F177A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -250,6 +259,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		083DAD9C1CA8913600974597 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				083DADA01CA8917100974597 /* HZYListTitleModel.h */,
+				083DADA11CA8917100974597 /* HZYListTitleModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		4E8BDF861C92AF25004F177A = {
 			isa = PBXGroup;
 			children = (
@@ -586,6 +604,7 @@
 		4EC6AA121C94021500076FCF /* HZYListTabBar(主要展示) */ = {
 			isa = PBXGroup;
 			children = (
+				083DAD9C1CA8913600974597 /* Model */,
 				4E8BDFC91C92B32F004F177A /* NewsUrl.plist */,
 				4E8BDFC81C92B2E9004F177A /* Common.h */,
 				4EC6AA161C94021500076FCF /* HZYResource.bundle */,
@@ -608,6 +627,10 @@
 		4EC6AA171C94021500076FCF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				083DAD951CA8910000974597 /* HZYCollectionView.h */,
+				083DAD961CA8910000974597 /* HZYCollectionView.m */,
+				083DAD971CA8910000974597 /* HZYCollectionViewCell.h */,
+				083DAD981CA8910000974597 /* HZYCollectionViewCell.m */,
 				4EC6AA181C94021500076FCF /* HZYListTabBar.h */,
 				4EC6AA191C94021500076FCF /* HZYListTabBar.m */,
 			);
@@ -739,6 +762,9 @@
 				4EC6A9D21C93FE7400076FCF /* AFHTTPRequestOperationManager.m in Sources */,
 				4EC6A93F1C93FD8C00076FCF /* HZYNewsModel.m in Sources */,
 				4EC6AA0C1C93FE7400076FCF /* UIImageView+HighlightedWebCache.m in Sources */,
+				083DAD9A1CA8910000974597 /* HZYCollectionViewCell.m in Sources */,
+				083DAD991CA8910000974597 /* HZYCollectionView.m in Sources */,
+				083DADA21CA8917100974597 /* HZYListTitleModel.m in Sources */,
 				4EC6A9F81C93FE7400076FCF /* UIScrollView+MJExtension.m in Sources */,
 				4EC6A9E81C93FE7400076FCF /* MJRefreshAutoFooter.m in Sources */,
 				4EC6A9FF1C93FE7400076FCF /* MKAnnotationView+WebCache.m in Sources */,

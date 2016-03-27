@@ -34,10 +34,9 @@
 @property (nonatomic, assign) NSInteger currentItemIndex;
 
 /**
- *  tabBar上所有要显示的item标题
+ *  tabBar上所有要显示的item标题和请求的URL的模型数组
  */
-@property (nonatomic, strong) NSArray *itemsTitle;
-
+@property (nonatomic, strong) NSArray *listModel;
 
 
 @end
